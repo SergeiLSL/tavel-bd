@@ -1,0 +1,21 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.title {
+   font-family: 'Josefin Sans'; 
+   font-weight: 600;
+   // font-size: rem(88);
+   @include adaptiveValue("font-size", 88, 58);
+   line-height: 113.63%; /* 100/88 */
+   text-transform: capitalize;
+   color: #020953;
+}
+
+.subtitle {
+   font-family: 'Roboto'; 
+   font-weight: 400;
+   // font-size: rem(32);
+   @include adaptiveValue("font-size", 32, 24);
+   // line-height: 312.5%; /* 100/32 */
+   @include adaptiveValue("line-height", 100, 32);
+   text-transform: lowercase;
+   color: #060A3F;
+}

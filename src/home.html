@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"TravelBD"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+
+         <section class="page__about about-page">
+            <div class="about-page__container">
+               <div class="about-page__inner">
+                  <div class="about-page__row">
+
+                     <div class="about-page__content">
+                        <h2 class="about-page__title title">
+                           <p>About us</p>
+                        </h2>
+                        <h3 class="about-page__subtitle subtitle">
+                           <p>the best travel agency for you</p>
+                        </h3>
+                        <!--? не забыть кнопку -->
+                        <div class="about-page__text">
+                           <div class="block__content text">
+                              <p">
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum sit libero,
+                                 placerat nibh facilisis in rutrum. Risus, gravida purus nunc suspendisse. Sit elementum
+                                 mi, netus in sit. Massa posuere ac auctor quis elementum.
+                              </p>
+                           </div>
+                           <button data-showmore-button type="button" class="block__more about-page__btn">
+                              <span>READ MORE</span><span>hide</span>
+                           </button>
+                        </div>
+                     </div>
+
+                     <div class="about-page__image">
+                        <a href="#"><img src="@img/about/image.jpg" alt="Image"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

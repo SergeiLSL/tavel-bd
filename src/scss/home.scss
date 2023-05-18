@@ -1,0 +1,79 @@
+//====================================================================================================
+.page {
+   // .page__about
+   &__about {
+   }
+}
+//====================================================================================================
+
+//========================================================================================
+.about-page {
+   @include adaptiveValue("padding-top", 128, 60);
+   @include adaptiveValue("padding-bottom", 102, 50);
+   // .about-page__container
+   &__container {
+   }
+   // .about-page__inner
+   &__inner {
+   }
+   // .about-page__row
+   &__row {
+      display: flex;
+      align-items: center;
+      gap: rem(53);
+      @media (max-width: $tablet) {
+         display: block;
+      }
+   }
+   // .about-page__content
+   &__content {
+      flex: 0 1 58%;
+      @media (max-width:$tablet){
+         &:not(:last-child) {margin-bottom: rem(15);}
+      }
+   }
+   // .about-page__title
+   &__title {
+      @media (max-width:$tablet){
+         &:not(:last-child) {margin-bottom: rem(10);}
+      }
+   }
+   // .about-page__subtitle
+   &__subtitle {
+      @media (max-width:$tablet){
+         &:not(:last-child) {margin-bottom: rem(15);}
+      }
+   }
+   // .about-page__text
+   &__text {
+      max-width: rem(728);
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: rem(32);
+      @include adaptiveValue("font-size", 32, 22);
+      // line-height: 165.63%; /* 53/32 */
+      @include adaptiveValue("line-height", 53, 32);
+      text-transform: capitalize;
+      color: rgba(6, 10, 64, 0.5);
+      // @media (max-width:$tablet){
+      //    &:not(:last-child) {margin-bottom: rem(15);}
+      // }
+   }
+   // .about-page__btn
+   &__btn {
+      margin-top: rem(15);
+   }
+   // .about-page__image
+   &__image {
+      flex: 0 1 42%;
+      width: 100%;
+      img {
+         max-width: 100%;
+         width: 100%;
+         // background: url(ebadur-rehman-kaium-oRsxtzxVmsY-unsplash.jpg);
+         border-radius: rem(61) 0 rem(89);
+      }
+   }
+}
+
+//========================================================================================
