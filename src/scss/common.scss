@@ -20,6 +20,6 @@
    @include adaptiveValue("font-size", 32, 24);
    // line-height: 312.5%; /* 100/32 */
    @include adaptiveValue("line-height", 100, 32);
-   text-transform: lowercase;
+   // text-transform: lowercase;
    color: #060A3F;
 }

@@ -3,10 +3,16 @@
    // .page__about
    &__about {
    }
+   // .page__services
+   &__services {
+   }
+   // .page__newsletter
+   &__newsletter {
+   }
 }
 //====================================================================================================
 
-//========================================================================================
+//=== start about ======================================================================
 .about-page {
    @include adaptiveValue("padding-top", 128, 60);
    @include adaptiveValue("padding-bottom", 102, 50);
@@ -28,20 +34,26 @@
    // .about-page__content
    &__content {
       flex: 0 1 58%;
-      @media (max-width:$tablet){
-         &:not(:last-child) {margin-bottom: rem(15);}
+      @media (max-width: $tablet) {
+         &:not(:last-child) {
+            margin-bottom: rem(15);
+         }
       }
    }
    // .about-page__title
    &__title {
-      @media (max-width:$tablet){
-         &:not(:last-child) {margin-bottom: rem(10);}
+      @media (max-width: $tablet) {
+         &:not(:last-child) {
+            margin-bottom: rem(10);
+         }
       }
    }
    // .about-page__subtitle
    &__subtitle {
-      @media (max-width:$tablet){
-         &:not(:last-child) {margin-bottom: rem(15);}
+      @media (max-width: $tablet) {
+         &:not(:last-child) {
+            margin-bottom: rem(15);
+         }
       }
    }
    // .about-page__text
@@ -76,4 +88,211 @@
    }
 }
 
-//========================================================================================
+//=== finish about =======================================================================
+//=== start servisec =========================================================================
+.services-page {
+   background: #ffffff;
+   @include adaptiveValue("padding-top", 102, 50);
+   @include adaptiveValue("padding-bottom", 102, 10);
+   position: relative;
+   z-index: 2;
+   // .services-page__container
+   &__container {
+   }
+   // .services-page__title
+   &__title {
+   }
+   // .services-page__subtitle
+   &__subtitle {
+      &:not(:last-child) {
+         margin-bottom: rem(70);
+      }
+   }
+   // .services-page__row
+   &__row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   // .services-page__column
+   &__column {
+      padding: 0 rem(10);
+      flex: 0 1 100%;
+      margin-bottom: rem(30);
+      @media (min-width: rem(575)) {
+         flex: 0 1 50%;
+      }
+      @media (min-width: $tablet) {
+         flex: 0 1 33.333%;
+      }
+      @media (min-width: rem(1200)) {
+         flex: 0 1 25%;
+      }
+   }
+   // .services-page__item
+   &__item {
+      // max-width: rem(290);
+      min-width: rem(250);
+      height: 100%; // чтобы карточки были одной высоты независимо от количества текста
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      // background: rgb(221, 254, 171);
+   }
+   // .services-page__box-image
+   &__box-image {
+      width: rem(250);
+      height: rem(259);
+      border: rem(20) solid rgba(255, 200, 0, 0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      &:not(:last-child) {
+         margin-bottom: rem(40);
+      }
+   }
+   // .services-page__image
+   &__image {
+      width: rem(210);
+      height: rem(217);
+      background-color: #ffc800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      img {
+         // background-color: #FFC800;
+         width: 100%;
+         max-width: 100%;
+         // height: 100%;
+         width: rem(125);
+         height: rem(125);
+         object-fit: cover;
+      }
+   }
+   // .services-page__name
+   &__name {
+      font-family: "Josefin Sans";
+      font-weight: 600;
+      font-size: rem(35);
+      @include adaptiveValue("font-size", 35, 30);
+      line-height: 100%; /* 26/35 */
+      text-transform: uppercase;
+      color: #040e27;
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+   }
+   // .services-page__desc
+   &__desc {
+      max-width: rem(280);
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: rem(24);
+      line-height: 108%; /* 26/24 */
+      // text-transform: lowercase;
+      color: rgba(0, 0, 0, 0.5);
+   }
+}
+
+//=== finish servisec =======================================================================
+//=== start newsletter ===================================================================
+.newsletter {
+   position: relative;
+   min-height: rem(253);
+   background: rgba(4, 14, 39, 0.65); // ? не работает
+   margin-bottom: rem(50); // ? убрать
+   // .newsletter__image-ibg
+   &__image-ibg {
+      // min-height: rem(253); // ? попробовать убрать
+      position: relative;
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+         &::after {
+            content: "";
+            background: rgba(4, 14, 39, 0.65); // ? не работает
+         }
+      }
+   }
+   // .newsletter__container
+   &__container {
+      // position: relative;
+   }
+   // .newsletter__inner
+   &__inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+   // .newsletter__row
+   &__row {
+      display: flex;
+      @media (max-width: $mobile) {
+         display: block;
+      }
+   }
+   // .newsletter__column
+   &__column {
+      position: relative;
+      flex: 0 1 50%;
+   }
+   // .newsletter__content
+   &__content {
+      max-width: rem(512);
+      @media (max-width: $mobile) {
+         padding: rem(10);
+      }
+   }
+   // .newsletter__title
+   &__title {
+      font-family: "Roboto";
+      font-size: rem(35);
+      @include adaptiveValue("font-size", 35, 28);
+      line-height: rem(100); /* 100/35 */
+      @include adaptiveValue("line-height", 100, 30);
+      text-transform: capitalize;
+      color: #ffffff;
+      @media (max-width: $mobile) {
+         @include adaptiveValue("margin-bottom", 0, 15);
+      }
+   }
+   // .newsletter__subtitle
+   &__subtitle {
+      font-family: "Roboto";
+      font-size: rem(24);
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: 112%; /* 27/24 */
+      text-transform: lowercase;
+      color: #ffffff;
+   }
+   // .newsletter__form
+   &__form {
+      flex: 0 1 50%;
+   }
+}
+
+.form {
+}
+
+//=== finish newsletter =======================================================================
+//=== start =========================================================================
+
+//=== finish  =======================================================================
+//=== start  ========================================================================
+
+//=== finish  =======================================================================
+//=== start  =========================================================================
+
+//=== finish  =======================================================================
+//=== start  ========================================================================
