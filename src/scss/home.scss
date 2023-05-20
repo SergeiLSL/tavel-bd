@@ -293,6 +293,113 @@
 
 //=== finish  =======================================================================
 //=== start  =========================================================================
+.trips-page {
+   @include adaptiveValue("padding-top", 90, 40);
+   @include adaptiveValue("padding-bottom", 190, 40);
+   // .trips-page__container
+   &__container {
+   }
+   // .trips-page__subtitle
+   &__subtitle {
+   }
+   // .trips-page__title
+   &__title {
+      // text-align: center;
+      &:not(:last-child) {
+         margin-bottom: rem(53); /* 77/1270 */
+      }
+   }
+   // .trips-page__row
+   &__row {
+      margin: 0 rem(-11.5);
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: rem(20);
+   }
+   // .trips-page__column
+   &__column {
+      flex: 0 1 33.333%;
+      padding: rem(0) rem(15.5);
+      @media (max-width: $tablet) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 1 100%;
+      }
+   }
+   // .trips-page__item
+   &__item {
+   }
+}
 
-//=== finish  =======================================================================
-//=== start  ========================================================================
+.card {
+   // .card__image
+   &__image {
+      padding: 0px 0px 112% 0px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+      &:hover {
+         transform: scale(1.03);
+      }      
+   }
+   // .card__content
+   &__content {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      background: linear-gradient(180deg, rgba(6, 10, 64, 0) 17.69%, rgba(6, 10, 64, 0.75) 84.92%);
+      width: 100%;
+      text-align: center;
+      padding-top: 29%;
+   }   
+   // .card__name
+   &__name {
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: rem(24);
+      line-height: 417%; /* 44/24 */
+      text-transform: capitalize;
+      color: #FFFFFF;
+   }   
+   // .card__body
+   &__body {
+      color: #fff;
+      display: flex;
+      align-items: center;
+   }
+   // .card__info
+   &__info {
+   }
+   // .card__date
+   &__date {
+      font-family: "Roboto";
+      font-weight: 300;
+      @include adaptiveValue("font-size", 20, 18);
+      line-height: 220%; /* 44/20 */
+      text-transform: lowercase;
+      color: rgba(4, 14, 39, 0.6);
+      @media (max-width: rem(1100)) {
+         // line-height: 110%; /* 32/16 */
+      }
+   }
+   // .card__desc
+   &__desc {
+      font-family: "Roboto";
+      @include adaptiveValue("font-size", 24, 20);
+      line-height: 183%; /* 44/24 */
+      text-transform: capitalize;
+      color: #040e27;
+   }
+}
+//=== finish trips =======================================================================
+//===========================================================================
