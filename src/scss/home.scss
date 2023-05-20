@@ -14,8 +14,8 @@
 
 //=== start about ======================================================================
 .about-page {
-   @include adaptiveValue("padding-top", 128, 60);
-   @include adaptiveValue("padding-bottom", 102, 50);
+   @include adaptiveValue("padding-top", 128, 40);
+   @include adaptiveValue("padding-bottom", 102, 30);
    // .about-page__container
    &__container {
    }
@@ -143,7 +143,7 @@
    // .services-page__box-image
    &__box-image {
       width: rem(250);
-      height: rem(259);
+      height: rem(250);
       border: rem(20) solid rgba(255, 200, 0, 0.25);
       border-radius: 50%;
       display: flex;
@@ -157,7 +157,7 @@
    // .services-page__image
    &__image {
       width: rem(210);
-      height: rem(217);
+      height: rem(210);
       background-color: #ffc800;
       border-radius: 50%;
       display: flex;
@@ -179,7 +179,7 @@
       font-family: "Josefin Sans";
       font-weight: 600;
       font-size: rem(35);
-      @include adaptiveValue("font-size", 35, 30);
+      @include adaptiveValue("font-size", 35, 32);
       line-height: 100%; /* 26/35 */
       text-transform: uppercase;
       color: #040e27;
