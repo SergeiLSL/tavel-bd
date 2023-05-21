@@ -11,6 +11,58 @@
    }
 }
 //====================================================================================================
+//====================================================================================================
+.first-page {
+   position: relative;
+   &__image-ibg {
+      position: relative;
+      height: rem(1358); /* 729/1368 */
+      // width: 100%;
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+   }
+   // .first-page__container
+   &__container {
+      position: relative;
+   }
+   // .first-page__content
+   &__content {
+      position: absolute;
+      // top: rem(-762);
+      bottom: rem(692);
+      left: rem(24);
+      max-width: rem(1030);
+   }
+   // .first-page__title
+   &__title {
+      font-family: 'Josefin Sans';
+      font-weight: 600;
+      @include adaptiveValue("font-size", 88, 50);
+      line-height: 114%; /* 100/88 */
+      color: #ffffff;
+      span {
+         color: var(--bg-accent);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(18);
+      }
+   }
+   // .first-page__text
+   &__text {
+      font-family: 'Roboto';
+      font-weight: 300;
+      @include adaptiveValue("font-size", 40, 26);
+      line-height: 250%; /* 100/88 */
+      color: #ffffff;
+   }
+}
+//========================================================================================
 
 //=== start about ======================================================================
 .about-page {
@@ -202,6 +254,8 @@
 //=== finish servisec =======================================================================
 //=== start newsletter ===================================================================
 .newsletter {
+   @include adaptiveValue("padding-top", 90, 40);
+   @include adaptiveValue("padding-bottom", 100, 40);
    position: relative;
    min-height: rem(233);
    margin-bottom: rem(50); // ? убрать
@@ -232,7 +286,7 @@
    // .newsletter__inner
    &__inner {
       padding: rem(30) 0;
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
          padding-top: rem(20);
       }
       // position: absolute;
@@ -313,11 +367,11 @@
       border-radius: rem(8);
       width: 100%;
       padding: rem(19) rem(24) rem(20) rem(24);
-      @media (max-width:$mobile){
-         padding: rem(15) rem(25) rem(15) rem(25);   
-      }      
-      @media (max-width:$mobileSmall){
-         padding: rem(10) rem(15) rem(10) rem(15);     
+      @media (max-width: $mobile) {
+         padding: rem(15) rem(25) rem(15) rem(25);
+      }
+      @media (max-width: $mobileSmall) {
+         padding: rem(10) rem(15) rem(10) rem(15);
       }
       &::placeholder {
          color: #828282;
@@ -353,11 +407,11 @@
       &:hover {
          opacity: 0.8;
       }
-      @media (max-width:$mobile){
-         padding: rem(15) rem(25) rem(15) rem(25);   
+      @media (max-width: $mobile) {
+         padding: rem(15) rem(25) rem(15) rem(25);
       }
-      @media (max-width:$mobileSmall){
-         padding: rem(10) rem(15) rem(10) rem(15);     
+      @media (max-width: $mobileSmall) {
+         padding: rem(10) rem(15) rem(10) rem(15);
       }
    }
    &__error {
