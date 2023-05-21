@@ -23,3 +23,13 @@
    // text-transform: lowercase;
    color: #060A3F;
 }
+ /* +++++++++++++++++++++++++++++++++++++ */
+
+.title-footer {
+   font-family: 'Josefin Sans';
+   font-size: rem(25);
+   // line-height: rem(100); /* 100/25 */
+   @include adaptiveValue("line-height", 100, 50);
+   text-transform: capitalize;
+   color: #FFFFFF;
+}

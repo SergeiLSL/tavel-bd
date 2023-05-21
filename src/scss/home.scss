@@ -203,13 +203,13 @@
 //=== start newsletter ===================================================================
 .newsletter {
    position: relative;
-   min-height: rem(253);
-   background: rgba(4, 14, 39, 0.65); // ? не работает
+   min-height: rem(233);
    margin-bottom: rem(50); // ? убрать
    // .newsletter__image-ibg
    &__image-ibg {
-      // min-height: rem(253); // ? попробовать убрать
+      min-height: rem(233);
       position: relative;
+      padding-bottom: 12.14%;
       img {
          position: absolute;
          width: 100%;
@@ -217,28 +217,35 @@
          top: 0;
          left: 0;
          object-fit: cover;
-         &::after {
-            content: "";
-            background: rgba(4, 14, 39, 0.65); // ? не работает
-         }
       }
    }
    // .newsletter__container
    &__container {
-      // position: relative;
+      position: absolute;
+      // background: rgba(4, 14, 39, 0.65);
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
    // .newsletter__inner
    &__inner {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      padding: rem(30) 0;
+      @media (max-width:$tablet){
+         padding-top: rem(20);
+      }
+      // position: absolute;
+      // width: 100%;
+      // height: 100%;
+      // top: 0;
+      // left: 0;
    }
    // .newsletter__row
    &__row {
       display: flex;
-      @media (max-width: $mobile) {
+      align-items: center;
+      @media (max-width: $tablet) {
          display: block;
       }
    }
@@ -250,8 +257,11 @@
    // .newsletter__content
    &__content {
       max-width: rem(512);
-      @media (max-width: $mobile) {
-         padding: rem(10);
+      margin-right: rem(20);
+      @media (max-width: $tablet) {
+         margin-bottom: rem(20);
+         max-width: 100%;
+         margin-right: 0;
       }
    }
    // .newsletter__title
@@ -283,6 +293,79 @@
 }
 
 .form {
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   // .form__item
+   &__item {
+   }
+   // .form__input
+   &__input {
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: rem(20);
+      line-height: 135%; /* 27/20 */
+      text-transform: lowercase;
+      color: rgba(0, 0, 0, 0.5);
+      background-color: #ffffff;
+      border-radius: rem(8);
+      width: 100%;
+      padding: rem(19) rem(24) rem(20) rem(24);
+      @media (max-width:$mobile){
+         padding: rem(15) rem(25) rem(15) rem(25);   
+      }      
+      @media (max-width:$mobileSmall){
+         padding: rem(10) rem(15) rem(10) rem(15);     
+      }
+      &::placeholder {
+         color: #828282;
+         font-size: rem(20);
+         text-transform: capitalize;
+         padding: rem(19) rem(24) rem(20) rem(24);
+      }
+      &:focus {
+         color: #4f4f4f;
+         background-color: #fff;
+         border-color: #bdbdbd;
+         outline: 0;
+         box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+      }
+   }
+   // .form__buttons
+   &__buttons {
+   }
+   // .form__button
+   &__button {
+      display: inline-block;
+      font-family: "Roboto";
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: 135%; /* 27/20 */
+      text-transform: capitalize;
+      color: #040e27;
+      padding: rem(19) rem(41) rem(20) rem(39);
+      background: #ffc800;
+      border-radius: 8px;
+      margin-left: rem(10);
+      transition: all 0.5s;
+      &:hover {
+         opacity: 0.8;
+      }
+      @media (max-width:$mobile){
+         padding: rem(15) rem(25) rem(15) rem(25);   
+      }
+      @media (max-width:$mobileSmall){
+         padding: rem(10) rem(15) rem(10) rem(15);     
+      }
+   }
+   &__error {
+      padding: rem(5) rem(18) rem(0) rem(18);
+      color: red;
+      font-size: rem(12);
+      font-weight: 600;
+   }
 }
 
 //=== finish newsletter =======================================================================
@@ -349,7 +432,7 @@
       }
       &:hover {
          transform: scale(1.03);
-      }      
+      }
    }
    // .card__content
    &__content {
@@ -361,7 +444,7 @@
       width: 100%;
       text-align: center;
       padding-top: 29%;
-   }   
+   }
    // .card__name
    &__name {
       font-family: "Roboto";
@@ -369,8 +452,8 @@
       font-size: rem(24);
       line-height: 417%; /* 44/24 */
       text-transform: capitalize;
-      color: #FFFFFF;
-   }   
+      color: #ffffff;
+   }
    // .card__body
    &__body {
       color: #fff;
