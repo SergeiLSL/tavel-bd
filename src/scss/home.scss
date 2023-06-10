@@ -6,6 +6,9 @@
    // .page__services
    &__services {
    }
+   // .page__where
+   &__where {
+   }
    // .page__newsletter
    &__newsletter {
    }
@@ -258,6 +261,98 @@
 }
 
 //=== finish servisec =======================================================================
+//=== start where ============================================================================================
+.where-page {
+   @include adaptiveValue("padding-top", 99, 20);
+   @include adaptiveValue("padding-bottom", 99, 20);
+   // .where-page__inner
+   &__inner {
+      background: #040e27;
+   }
+   // .where-page__container
+   &__container {
+   }
+   // .where-page__content
+   &__content {
+      @include adaptiveValue("padding-top", 47, 20);
+      @include adaptiveValue("padding-bottom", 45, 20);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("column-gap", 35, 10);
+      @media (max-width: $tablet) {
+         flex-wrap: wrap;
+         row-gap: rem(15);
+      }
+      @media (max-width: $mobile) {
+         display: block;
+         // flex-direction: column;
+      }
+   }
+   // .where-page__item
+   &__item {
+      flex: 0 1 20%;
+      font-weight: 300;
+      font-size: rem(16);
+      line-height: 162.5%; /* 26/16 */
+      padding: rem(14) rem(25) rem(12) rem(25);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      &:nth-child(1),
+      &:last-child {
+         border: none;
+         padding: 0;
+         flex: 0 1 11%;
+      }
+      &:nth-child(1) {
+         flex: 1 0 20%;
+         @media (max-width: $tablet) {
+            flex: 1 0 100%;
+         }
+      }
+      @media (max-width: $tablet) {
+         flex: 1 0 25%;
+      }
+      @media (max-width: $mobile) {
+         &:not(:last-child) {
+            margin-bottom: rem(15);
+         }
+      }
+   }
+   // .where-page__question
+   &__question {
+      font-size: rem(25);
+      line-height: 104%;
+   }
+   // .where-page__place
+   &__place {
+      font-size: rem(16);
+      line-height: 162%;
+   }
+   // .where-page__date
+   &__date {
+      font-size: rem(16);
+      line-height: 162%;
+   }
+   // .where-page__type
+   &__type {
+      font-size: rem(16);
+      line-height: 162%;
+   }
+   // .where-page__button
+   &__button {
+      background: #ffc800;
+      border-radius: 8px;
+      padding: rem(14) rem(50);
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: 162.5%; /* 26/16 */
+      text-transform: capitalize;
+      color: #040e27;
+   }
+}
+
+//=== finish where =============================================================================================
 //=== start destination =========================================================================
 .destination-page {
    @include adaptiveValue("padding-top", 100, 30);
