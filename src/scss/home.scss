@@ -69,6 +69,26 @@
       @include adaptiveValue("font-size", 40, 26);
       line-height: 250%; /* 100/88 */
       color: #ffffff;
+      &:not(:last-child) {
+         margin-bottom: rem(49);
+      }
+   }
+   // .first-page__button
+   &__button {
+      background-color: #ffc800;
+      border-radius: 10px;
+      padding: rem(5) rem(0);
+      @include adaptiveValue("padding-left", 74, 35);
+      @include adaptiveValue("padding-right", 53, 40);
+      font-weight: 400;
+      font-size: rem(30);
+      line-height: 333%; /* 26/16 */
+      text-transform: capitalize;
+      transition: background-color 0.5s ease;
+      color: #030a4d;
+      &:hover {
+         background-color: #e1b101;
+      }
    }
 }
 //========================================================================================
@@ -341,7 +361,7 @@
    }
    // .where-page__button
    &__button {
-      background: #ffc800;
+      background-color: #ffc800;
       border-radius: 8px;
       padding: rem(14) rem(50);
       font-weight: 400;
@@ -349,6 +369,10 @@
       line-height: 162.5%; /* 26/16 */
       text-transform: capitalize;
       color: #040e27;
+      transition: background-color 0.5s ease;
+      &:hover {
+         background-color: #e1b101;
+      }
    }
 }
 
