@@ -33,3 +33,23 @@
    text-transform: capitalize;
    color: #FFFFFF;
 }
+
+/* ---------------------------------- */
+// %animate {
+//    // * анимация
+//    transform: translate(0, rem(100));
+//    opacity: 0;
+//    transition: all 1s;
+//    .previous-section & {
+//       transform: translate(0, rem(-100));
+//    }
+//    .next-section & {
+//       transform: translate(0, rem(100));
+//    }
+//    // * анимация
+//    .active-section & {
+//       // transition: all 1s ease 0.8s;
+//       transform: translate(0, 0);
+//       opacity: 1;
+//    }
+// }
